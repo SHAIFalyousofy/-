@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    for(var i=0;i<a.length;i++) { for (let index=0; index< re.length; index++){ if(a[i]==b[index]){ break; } } } } var
+        a=["osam"]; var re=["soam"]; show(a, re);
+        */ -->
+    <script>
+        
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+                         /*   Question one  */
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+        function CompareString(string1, string2)
+        {
+            var counter=0;
+            for (var i = 0; i < string1.length; i++){
+                for (let index = 0; index <string2.length; index++){
+                    if(string1[i]==string2[index])
+                    {
+                        
+                        counter++;
+                        break;
+                    }
+
+            
+            }
+
+    }
+                    
+                    if (string1.length==counter && string2.length==counter)
+                    {
+                        return true;
+                    }
+                        else
+                        {
+                          return false; 
+                        }
+
+
+    }
+
+            var string1 = "sheaf", string2 = "sheeaf";
+            console.log(CompareString(string1,string2));
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+                         /*   Question two */
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+        function   findElement(fArray,i,j){
+            var indexNewArray=0;
+            var newArray1=[];
+            for (let index = 0; index < fArray.length; index++) {
+                if(index>i && index<j){
+                newArray1[indexNewArray]=fArray[index];
+                indexNewArray++;
+                }
+             
+            }
+
+               return newArray1;
+        }
+
+        var fArray=[10,20,30,401,2,4,5,6,7];
+            console.log(findElement(fArray,3,7));
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+                         /*   Question three  */
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+        function spliteString(SpliteArr){
+                        var item="" ;
+                        var newArray=[];
+                        var indexOfNewArray=0;
+                    for (  let index = 0; index<SpliteArr.length;index++) {
+                        if(SpliteArr[index]!=" "){
+                            item+=SpliteArr[index];
+                    } 
+            else
+            { 
+                    newArray[indexOfNewArray]= item;
+                    item="";
+                    indexOfNewArray++;
+            }
+            if(index==SpliteArr.length-1)
+                newArray[indexOfNewArray]=item;
+            }
+                return newArray;
+            }
+            String1="sheaf juwad mansoor sheaf";
+            console.log(spliteString(String1));
+
+
+ 
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+                         /*   Question FOUR  */
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+    function CalculateAge()
+{
+            var datebirethe =new Date("9,Nov,2001");
+            var dateNa= new Date();
+            var AgePerson=dateNa-datebirethe; 
+            console.log((AgePerson)/1000/60/60/24/365);
+}           
+    CalculateAge();
+   
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+                         /*   Question FIVE  */
+    
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+  
+    function ValidEmail(Email){
+      condition=/^[^@]+[^@][a-zA-Z]+@(gmail|yahoo|live|mail|outlook)+\.(com)/ig ;
+     Boolean  = condition.test(Email);
+      console.log(Boolean);
+    }
+    var Email="ShaifGawadMansoor@gmail.com";
+    ValidEmail(Email);
+
+  
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+                         /*   Question SIX */
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+    function subString(str, currentSubString,newString){
+                     var item="" ;
+                    str=str.toLowerCase();
+                   currentSubString=currentSubString.toLowerCase();
+                        var newArray=[];
+                        var indexOfNewArray=0;
+                    for (  let index = 0; index<str.length;index++) {
+                        if(str[index]!=" "){
+                            item+=str[index];
+                    } 
+            else
+            { 
+
+                    newArray[indexOfNewArray]=item;
+                    item="";
+                    indexOfNewArray++;
+            }
+            if(index==str.length-1) 
+                {
+                    newArray[indexOfNewArray]=item;
+                }
+            }
+            for (let index = 0; index< newArray.length; index++) {
+                if(newArray[index]==currentSubString){
+                 newArray[index]=newString; }
+
+            }
+
+                return newArray;
+
+    }
+    
+        var String= "SHAIF juwad MANSOOR SHAIF" ;
+            console.log(subString(String,"JUWAD"," Alyous"));
+       
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                         /*   Question seven  */
+    
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function findSmallValue(arr){
+    var temp;
+    
+    for (let i = 0; i <arr.length; i++) {
+        for (let j = 0; j<arr.length; j++) {
+            if(arr[j]>arr[j+1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+            
+        }
+
+    }
+   return arr[1];
+
+}
+var arr = [10, 20, 30, 40, 50, 6, 9];
+console.log("The seconde smallest value in array is :"  + findSmallValue(arr));
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                         /*   Question Eight  */
+    
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function findDifferent(fArray,sArray){
+    var arrayDifferentValue=[],index=0;
+    var arr1=[],arr2=[];
+    var c=0;
+    for (let i = 0; i <fArray.length; i++) {
+        for (let j = 0; j < sArray.length;j++) {
+            if(fArray[i]==sArray[j]){
+            arr1[index]=fArray[i];
+            index++;
+        }
+
+
+          
+}
+    }
+    index=0;
+    for (let ind = 0; ind<fArray.length; ind++) {
+        for(var counter=0;counter<arr1.length;counter++){
+        if(fArray[ind]!=arr1[counter])
+        {
+          arr2[index] = fArray[ind];
+            index++;
+         
+
+        }
+          }
+    }
+    return arr2;
+}
+    var fArray= [10, 20,23, 45, 34];
+    var sArray= [20, 30, 44,32, 1, 5];
+console.log(findDifferent(fArray,sArray));
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                                      // Question  nine
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+ 
+    // function getDeferent( seconde){
+    //      var second;
+    //      var  minutes;
+    //      var hour;
+
+
+    // }
+
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
